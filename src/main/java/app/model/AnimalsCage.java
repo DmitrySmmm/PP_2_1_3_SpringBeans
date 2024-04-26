@@ -5,17 +5,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AnimalsCage {
-
     @Autowired
     @Qualifier("dog")
     private Animal animal;
     @Autowired
-    @Qualifier("timer")
-    private Timer timer;
+    private Timer timer = new Timer();
+    public Timer getTimer() {
+        Timer timer = this.timer;
+        return timer;
+    }
 
     public void whatAnimalSay() {
         System.out.println("Say:");
