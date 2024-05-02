@@ -13,13 +13,6 @@ public class AppConfig {
     @Bean(name = "animalsCage")
     public AnimalsCage getAnimal() {
         AnimalsCage animal = new AnimalsCage();
-//        Timer timer = new Timer();
         return animal;
     }
-//    @Bean(name = "Timer")
-//    public Timer getTimer() {
-//        Timer timer = new Timer();
-//        return timer;
-//    }
-
 }

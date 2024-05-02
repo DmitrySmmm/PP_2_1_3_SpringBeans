@@ -14,10 +14,9 @@ public class AnimalsCage {
     @Qualifier("dog")
     private Animal animal;
     @Autowired
-    private Timer timer = new Timer();
+    private Timer timer;
     public Timer getTimer() {
-        Timer timer = this.timer;
-        return timer;
+        return this.timer;
     }
 
     public void whatAnimalSay() {
